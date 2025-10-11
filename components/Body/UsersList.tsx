@@ -6,6 +6,7 @@ import {
   View,
 } from "react-native";
 import React from "react";
+import CardUser from "./CardUser";
 
 const usersList = () => {
   interface userItem {
@@ -23,7 +24,11 @@ const usersList = () => {
 
   return (
     <View>
-      <ScrollView></ScrollView>
+      <ScrollView>
+        {usersList.map((user) => (
+          <CardUser />
+        ))}
+      </ScrollView>
     </View>
   );
 };
