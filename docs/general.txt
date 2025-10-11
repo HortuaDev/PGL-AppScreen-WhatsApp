@@ -1,0 +1,3 @@
+creado el compoennte headerComoponent
+creado el archivo colors que contendra los colores principales de la app
+agregada la paleta de colores del proyecto con la herramienta 
