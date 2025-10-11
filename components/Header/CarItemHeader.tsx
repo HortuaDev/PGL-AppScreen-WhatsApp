@@ -1,14 +1,24 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const CarItemHeader = () => {
+interface CardItem {
+  image?: string;
+  text?: string;
+  notifications?: number;
+}
+
+const CarItemHeader = (props: CardItem) => {
   return (
-    <View>
+    <View style={styles.cardItemContainer}>
+      <Image></Image>
       <Text>CarItemHeader</Text>
+      <Text>2</Text>
     </View>
   );
 };
 
 export default CarItemHeader;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  cardItemContainer: {},
+});

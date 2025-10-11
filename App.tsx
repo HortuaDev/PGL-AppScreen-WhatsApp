@@ -4,8 +4,11 @@ import HeaderComponent from "./components/Header/HeaderComponent";
 
 export default function App() {
   return (
-    <View>
+    <View style={styles.container}>
       <HeaderComponent />
+      <View style={{ flex: 8 }}>
+        <Text>hola</Text>
+      </View>
     </View>
   );
 }
