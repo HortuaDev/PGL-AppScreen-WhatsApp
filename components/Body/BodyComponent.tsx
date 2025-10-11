@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
-import UsersList from "./usersList";
+import UsersList from "./UserList";
 import ViewedUpdate from "./viewedUpdate";
 import Channels from "./Channels";
 
