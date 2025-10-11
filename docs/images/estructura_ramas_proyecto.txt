@@ -1,0 +1,1 @@
+decidi crear una estructura de ramas sencilla para desarrollar el proyecto, el develop para hacer las modificaciones pertinentes que considere necesarias y la body para el contenido interno de la app
