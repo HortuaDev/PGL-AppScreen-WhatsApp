@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <HeaderComponent />
-      <View style={{ flex: 8 }}>
+      <View style={{ flex: 10 }}>
         <Text>hola</Text>
       </View>
     </View>

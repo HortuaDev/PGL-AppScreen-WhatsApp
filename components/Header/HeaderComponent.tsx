@@ -1,18 +1,19 @@
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { ImageSourcePropType } from "react-native";
 import { Color } from "../../styles/Colors";
 import CarItemHeader from "./CarItemHeader";
 
 const HeaderComponent = () => {
   interface CardItem {
     id: number;
-    image?: string;
+    image?: ImageSourcePropType;
     text?: string;
     notifications?: number;
   }
 
   const itemsInfo: CardItem[] = [
-    { id: 1, image: "" },
+    { id: 1, image: require("../../assets/images/icon_group_64.png") },
     { id: 2, text: "Chats", notifications: 2 },
     { id: 3, text: "Updates" },
     { id: 4, text: "Calls" },
@@ -36,9 +37,17 @@ const HeaderComponent = () => {
         </View>
       </View>
       <View style={styles.buttonPart}>
-        <ScrollView horizontal={true}>
+        <ScrollView
+          horizontal={true}
+          contentContainerStyle={styles.scrollViewHorizontalHeader}
+        >
           {itemsInfo.map((item) => (
-            <CarItemHeader key={item.id} />
+            <CarItemHeader
+              key={item.id}
+              image={item.image}
+              text={item.text}
+              notifications={item.notifications}
+            />
           ))}
         </ScrollView>
       </View>
@@ -51,12 +60,12 @@ export default HeaderComponent;
 const styles = StyleSheet.create({
   headerContainer: {
     backgroundColor: Color.primaryColor,
-    flex: 1,
+    flex: 2,
     width: "100%",
   },
 
-  topPart: { flex: 1, flexDirection: "row" },
-  contentTile: { flex: 15, justifyContent: "center", alignItems: "flex-start" },
+  topPart: { flex: 4, flexDirection: "row", width: "100%" },
+  contentTile: { flex: 4, justifyContent: "center", alignItems: "flex-start" },
   title: {
     marginLeft: 20,
     fontSize: 30,
@@ -72,4 +81,8 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
   icon: { height: 32, width: 32 },
+
+  scrollViewHorizontalHeader: {
+    width: "100%",
+  },
 });
