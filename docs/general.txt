@@ -1,3 +1,11 @@
 creado el compoennte headerComoponent
 creado el archivo colors que contendra los colores principales de la app
 agregada la paleta de colores del proyecto con la herramienta 
+creada la estructura del headerComponent, 
+creado el componente CardItemHeader
+asignada la estructura al CardItemHeader
+modificados los estilos del CardItemHeader
+modificados los estilos del HeaderComponent
+estructurado con exito el header de la app con el cardItemHeader en el HeaderComponent
+modificada la estructura del HeaderComponent para que la estructura visual se vea correctamente
+hecho el merge con develop
