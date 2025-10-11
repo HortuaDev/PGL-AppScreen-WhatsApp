@@ -1,14 +1,35 @@
-import { Text, StyleSheet, View } from "react-native";
-import React, { Component } from "react";
+import {
+  ImageSourcePropType,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
+import React from "react";
 
-export default class UsersList extends Component {
-  render() {
-    return (
-      <View>
-        <Text>usersList</Text>
-      </View>
-    );
+const usersList = () => {
+  interface userItem {
+    name: string;
+    storyHour: string;
+    image: ImageSourcePropType;
   }
-}
 
-const styles = StyleSheet.create({});
+  const usersList: userItem[] = [
+    { name: "Luis", storyHour: "15:10", image: require("") },
+    { name: "Maria", storyHour: "14:37", image: require("") },
+    { name: "Ana Belen", storyHour: "10:42", image: require("") },
+    { name: "Airam", storyHour: "09:30", image: require("") },
+  ];
+
+  return (
+    <View>
+      <ScrollView></ScrollView>
+    </View>
+  );
+};
+
+export default usersList;
+
+const styles = StyleSheet.create({
+  userListContainer: {},
+});

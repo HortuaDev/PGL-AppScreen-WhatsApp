@@ -1,14 +1,14 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const viewedUpdate = () => {
+const CardUser = () => {
   return (
     <View>
-      <Text>viewedUpdate</Text>
+      <Text>CardUser</Text>
     </View>
   );
 };
 
-export default viewedUpdate;
+export default CardUser;
 
 const styles = StyleSheet.create({});

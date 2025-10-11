@@ -1,14 +1,8 @@
-import { ImageSourcePropType, StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import UsersList from "./usersList";
 import ViewedUpdate from "./viewedUpdate";
 import Channels from "./Channels";
-
-interface userItem {
-  name: string;
-  storyHour: number;
-  images: ImageSourcePropType;
-}
 
 const BodyComponent = () => {
   return (
