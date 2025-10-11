@@ -30,11 +30,10 @@ export default CarItemHeader;
 
 const styles = StyleSheet.create({
   cardItemContainer: {
-    flex: 1,
     flexDirection: "row",
     alignItems: "center",
     marginLeft: 5,
-    justifyContent: "space-between",
+    justifyContent: "center",
   },
   cardIcon: { height: 35, width: 35 },
   textContainerCard: {

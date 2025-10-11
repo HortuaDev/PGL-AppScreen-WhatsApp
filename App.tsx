@@ -1,13 +1,12 @@
 import { StyleSheet, Text, View } from "react-native";
 import HeaderComponent from "./components/Header/HeaderComponent";
+import BodyComponent from "./components/Body/BodyComponent";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <HeaderComponent />
-      <View style={{ flex: 10 }}>
-        <Text>hola</Text>
-      </View>
+      <BodyComponent></BodyComponent>
     </View>
   );
 }

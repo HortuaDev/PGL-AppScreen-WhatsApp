@@ -39,6 +39,7 @@ const HeaderComponent = () => {
       <View style={styles.buttonPart}>
         <ScrollView
           horizontal={true}
+          showsHorizontalScrollIndicator={true}
           contentContainerStyle={styles.scrollViewHorizontalHeader}
         >
           {itemsInfo.map((item) => (
@@ -72,7 +73,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: Color.textPrimaryColor,
   },
-  buttonPart: { flex: 1 },
+  buttonPart: { flex: 2 },
   contentIcons: {
     flex: 1,
     flexDirection: "row",
@@ -83,6 +84,10 @@ const styles = StyleSheet.create({
   icon: { height: 32, width: 32 },
 
   scrollViewHorizontalHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 25,
+    paddingHorizontal: 15,
     width: "100%",
   },
 });
