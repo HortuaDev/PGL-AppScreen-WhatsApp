@@ -9,73 +9,26 @@ import React, { use } from "react";
 import CardUser from "./CardUser";
 import { Color } from "../../styles/Colors";
 
-const UsersList = () => {
-  interface userItem {
-    id: number;
-    name: string;
-    storyHour: string;
-    image: ImageSourcePropType;
-  }
+interface userItem {
+  id: number;
+  name: string;
+  hour: string;
+  image: ImageSourcePropType;
+}
 
-  const usersList: userItem[] = [
-    {
-      id: 1,
-      name: "Luis",
-      storyHour: "15:10",
-      image: require("../../assets/images/icon_group_64.png"),
-    },
-    {
-      id: 2,
-      name: "Maria",
-      storyHour: "14:37",
-      image: require("../../assets/images/icon_group_64.png"),
-    },
-    {
-      id: 3,
-      name: "Ana Belen",
-      storyHour: "10:42",
-      image: require("../../assets/images/icon_group_64.png"),
-    },
-    {
-      id: 4,
-      name: "Airam",
-      storyHour: "09:30",
-      image: require("../../assets/images/icon_group_64.png"),
-    },
-    // {
-    //   id: 5,
-    //   name: "Luis",
-    //   storyHour: "15:10",
-    //   image: require("../../assets/images/icon_group_64.png"),
-    // },
-    // {
-    //   id: 6,
-    //   name: "Maria",
-    //   storyHour: "14:37",
-    //   image: require("../../assets/images/icon_group_64.png"),
-    // },
-    // {
-    //   id: 7,
-    //   name: "Ana Belen",
-    //   storyHour: "10:42",
-    //   image: require("../../assets/images/icon_group_64.png"),
-    // },
-    // {
-    //   id: 8,
-    //   name: "Airam",
-    //   storyHour: "09:30",
-    //   image: require("../../assets/images/icon_group_64.png"),
-    // },
-  ];
+interface userList {
+  users: userItem[];
+}
 
+const UsersList = ({ users }: userList) => {
   return (
     <View style={styles.userListContainer}>
       <ScrollView>
-        {usersList.map((user) => (
+        {users.map((user) => (
           <CardUser
             key={user.id}
             name={user.name}
-            storyHour={user.storyHour}
+            hour={user.hour}
             image={user.image}
           />
         ))}

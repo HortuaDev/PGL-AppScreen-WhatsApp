@@ -10,12 +10,12 @@ import { Color } from "../../styles/Colors";
 
 interface userItem {
   name: string;
-  storyHour: string;
+  hour: string;
   image: ImageSourcePropType;
 }
 
 const CardUser = (prop: userItem) => {
-  const { name, storyHour, image } = prop;
+  const { name, hour, image } = prop;
 
   return (
     <View style={styles.cardContainer}>
@@ -26,7 +26,7 @@ const CardUser = (prop: userItem) => {
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.textContainer}>{name}</Text>
-        <Text style={styles.hourContainer}>{storyHour}</Text>
+        <Text style={styles.hourContainer}>{hour}</Text>
       </View>
     </View>
   );
@@ -54,6 +54,8 @@ const styles = StyleSheet.create({
   },
   imageUser: {
     borderRadius: 50,
+    height: 70,
+    width: 70,
     backgroundColor: Color.secondaryColor,
     padding: 2,
   },
