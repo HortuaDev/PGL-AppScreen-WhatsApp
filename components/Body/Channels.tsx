@@ -1,10 +1,31 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import React from "react";
 
 const Channels = () => {
   return (
     <View>
-      <Text>Channels</Text>
+      <View>
+        <View>
+          <Text></Text>
+          <Image />
+        </View>
+        <View>
+          <Text></Text>
+        </View>
+      </View>
+      <View>
+        <ScrollView></ScrollView>
+      </View>
+      <View>
+        <Pressable></Pressable>
+      </View>
     </View>
   );
 };
