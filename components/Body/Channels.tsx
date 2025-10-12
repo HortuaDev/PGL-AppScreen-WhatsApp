@@ -7,6 +7,7 @@ import {
   View,
 } from "react-native";
 import React from "react";
+import CardChannel from "./CardChannel";
 
 const Channels = () => {
   return (
@@ -27,7 +28,21 @@ const Channels = () => {
         </View>
       </View>
       <View style={styles.listChannelsContainer}>
-        <ScrollView style={styles.listChannels}></ScrollView>
+        <ScrollView
+          horizontal={true}
+          contentContainerStyle={styles.listChannels}
+        >
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+          <CardChannel />
+        </ScrollView>
       </View>
       <View style={styles.buttonsContainer}>
         <Pressable style={styles.buttonChannel}>
@@ -41,8 +56,11 @@ const Channels = () => {
 export default Channels;
 
 const styles = StyleSheet.create({
-  channelContainer: { flex: 1, backgroundColor: "green" },
-  channelInfo: { flex: 1 },
+  channelContainer: {
+    flex: 1,
+    backgroundColor: "green",
+  },
+  channelInfo: { flex: 1, paddingHorizontal: 10 },
   titleIconContainer: {
     marginTop: 25,
     backgroundColor: "#000",
@@ -65,7 +83,11 @@ const styles = StyleSheet.create({
   },
   descriptionChannel: { fontSize: 20 },
   listChannelsContainer: { marginVertical: 20 },
-  listChannels: { height: 200, backgroundColor: "red" },
+  listChannels: {
+    padding: 10,
+    gap: 15,
+    backgroundColor: "red",
+  },
   buttonsContainer: { height: 100 },
   buttonChannel: {
     height: 55,

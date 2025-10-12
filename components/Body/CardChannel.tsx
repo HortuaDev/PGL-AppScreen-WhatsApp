@@ -20,7 +20,13 @@ const CardChannel = () => {
 export default CardChannel;
 
 const styles = StyleSheet.create({
-  CardChannelContainer: {},
+  CardChannelContainer: {
+    flex: 1,
+    backgroundColor: "yellow",
+    height: 180,
+    width: 150,
+    borderRadius: 20,
+  },
   CardImageContainer: {},
   CardImage: {},
   CardNameContainer: {},
