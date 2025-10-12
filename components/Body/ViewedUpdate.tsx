@@ -1,14 +1,27 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
-const viewedUpdate = () => {
+const ViewedUpdate = () => {
   return (
-    <View>
-      <Text>viewedUpdate</Text>
+    <View style={styles.viewUpdateContainer}>
+      <View style={styles.TextContentViewUpdate}>
+        <Text style={styles.textTitleView}></Text>
+      </View>
+      <View style={styles.iconViewContainer}>
+        <Image style={styles.iconView} />
+      </View>
+      <View style={styles.endViewUpdateLine}></View>
     </View>
   );
 };
 
-export default viewedUpdate;
+export default ViewedUpdate;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  viewUpdateContainer: {},
+  TextContentViewUpdate: {},
+  textTitleView: {},
+  iconViewContainer: {},
+  iconView: {},
+  endViewUpdateLine: {},
+});
