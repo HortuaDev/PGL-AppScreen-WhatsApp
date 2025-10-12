@@ -10,5 +10,7 @@ export const Color = {
     textPrimaryColor:"#86959e",
     textSecondaryColor:"#ecf0f1",
     textThirdColor:"#012623",
+    //story color
+    storyAvailableColor:"#3b9c67",
 
 };

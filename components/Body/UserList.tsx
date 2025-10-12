@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import React, { use } from "react";
 import CardUser from "./CardUser";
+import { Color } from "../../styles/Colors";
 
 const UsersList = () => {
   interface userItem {
@@ -44,7 +45,7 @@ const UsersList = () => {
   ];
 
   return (
-    <View>
+    <View style={styles.userListContainer}>
       <ScrollView>
         {usersList.map((user) => (
           <CardUser
@@ -62,5 +63,9 @@ const UsersList = () => {
 export default UsersList;
 
 const styles = StyleSheet.create({
-  userListContainer: {},
+  userListContainer: {
+    flex: 1,
+    backgroundColor: Color.secondaryColor,
+    padding: 15,
+  },
 });
