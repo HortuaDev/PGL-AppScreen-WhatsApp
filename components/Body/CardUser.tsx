@@ -49,11 +49,13 @@ const styles = StyleSheet.create({
   },
   borderSeparator: {
     borderRadius: 50,
-    backgroundColor: "red",
+    backgroundColor: Color.secondaryColor,
+    padding: 2,
   },
   imageUser: {
     borderRadius: 50,
-    padding: 4,
+    backgroundColor: Color.secondaryColor,
+    padding: 2,
   },
   infoContainer: { flex: 1, padding: 5 },
   textContainer: {
