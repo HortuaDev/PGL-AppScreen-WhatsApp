@@ -64,5 +64,10 @@ const styles = StyleSheet.create({
     textAlignVertical: "center",
     fontSize: 25,
   },
-  hourContainer: { flex: 1, textAlignVertical: "center", fontSize: 20 },
+  hourContainer: {
+    flex: 1,
+    textAlignVertical: "center",
+    fontSize: 20,
+    color: Color.textPrimaryColor,
+  },
 });
