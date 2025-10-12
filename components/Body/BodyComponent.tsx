@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import UsersList from "./UserList";
 import ViewedUpdate from "./ViewedUpdate";
@@ -7,9 +7,11 @@ import Channels from "./Channels";
 const BodyComponent = () => {
   return (
     <View style={styles.bodyContainer}>
-      <UsersList />
-      <ViewedUpdate />
-      <Channels />
+      <ScrollView style={styles.bodyContentList}>
+        <UsersList />
+        <ViewedUpdate />
+        <Channels />
+      </ScrollView>
     </View>
   );
 };
@@ -21,4 +23,5 @@ const styles = StyleSheet.create({
     flex: 10,
     width: "100%",
   },
+  bodyContentList: {},
 });
