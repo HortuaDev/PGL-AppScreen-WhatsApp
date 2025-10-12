@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   infoContainer: { flex: 1, padding: 5 },
   textContainer: {
     flex: 1,
-
+    color: Color.textSecondaryColor,
     textAlignVertical: "center",
     fontSize: 25,
   },
