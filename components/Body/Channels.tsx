@@ -8,6 +8,7 @@ import {
 } from "react-native";
 import React from "react";
 import CardChannel from "./CardChannel";
+import { Color } from "../../styles/Colors";
 
 const Channels = () => {
   return (
@@ -22,7 +23,7 @@ const Channels = () => {
         </View>
         <View style={styles.descriptionChannelContainer}>
           <Text style={styles.descriptionChannel}>
-            Stay updated on topics that matter to you. Find channels to follw
+            Stay updated on topics that matter to you. Find channels to follow
             below.
           </Text>
         </View>
@@ -58,47 +59,49 @@ export default Channels;
 const styles = StyleSheet.create({
   channelContainer: {
     flex: 1,
-    backgroundColor: "green",
+    backgroundColor: Color.secondaryColor,
   },
   channelInfo: { flex: 1, paddingHorizontal: 10 },
   titleIconContainer: {
     marginTop: 25,
-    backgroundColor: "#000",
     flex: 1,
     flexDirection: "row",
     alignItems: "center",
   },
   titleChannel: {
     flex: 1,
-    backgroundColor: "yellow",
+    color: Color.textSecondaryColor,
+    fontWeight: "500",
     fontSize: 30,
   },
   iconChannel: {
-    backgroundColor: "red",
-    height: 25,
-    width: 25,
+    height: 20,
+    width: 20,
   },
   descriptionChannelContainer: {
     marginTop: 13,
   },
-  descriptionChannel: { fontSize: 20 },
+  descriptionChannel: {
+    color: Color.textPrimaryColor,
+    fontSize: 20,
+  },
   listChannelsContainer: { marginVertical: 20 },
   listChannels: {
     padding: 10,
     gap: 15,
-    backgroundColor: "red",
   },
-  buttonsContainer: { height: 100 },
+  buttonsContainer: { paddingHorizontal: 10, height: 100 },
   buttonChannel: {
     height: 55,
     width: 200,
     borderRadius: 50,
-    backgroundColor: "red",
+    backgroundColor: Color.buttonSecondaryColor,
     alignItems: "center",
     justifyContent: "center",
   },
   textButtonChannel: {
     fontSize: 22,
     fontWeight: "500",
+    color: Color.textThirdColor,
   },
 });
