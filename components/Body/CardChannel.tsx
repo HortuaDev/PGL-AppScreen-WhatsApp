@@ -1,6 +1,7 @@
 import {
   Image,
   ImageBackground,
+  ImageSourcePropType,
   Pressable,
   StyleSheet,
   Text,
@@ -9,13 +10,24 @@ import {
 import React from "react";
 import { Color } from "../../styles/Colors";
 
-const CardChannel = () => {
+interface channelUser {
+  id: number;
+  name: string;
+  image: ImageSourcePropType;
+}
+
+interface CardChannelProps {
+  user: channelUser;
+}
+
+const CardChannel = ({ user }: CardChannelProps) => {
   return (
     <View style={styles.CardChannelContainer}>
       <View style={styles.CardImageContainer}>
         <ImageBackground
-          source={require("../../assets/images/icon_group_64.png")}
+          source={user.image}
           style={styles.CardImage}
+          imageStyle={styles.CardImageRounded}
         >
           <View style={styles.CardVerifiedIconContainer}>
             <Image
@@ -26,7 +38,7 @@ const CardChannel = () => {
         </ImageBackground>
       </View>
       <View style={styles.CardNameContainer}>
-        <Text style={styles.CardName}>BAD BUNNY</Text>
+        <Text style={styles.CardName}>{user.name}</Text>
       </View>
       <Pressable style={styles.CardButtonContainer}>
         <Text style={styles.TextButton}>Follow</Text>
@@ -53,9 +65,8 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   CardImage: {
-    height: 60,
-    width: 60,
-    borderRadius: 50,
+    height: 65,
+    width: 65,
   },
   CardVerifiedIconContainer: {
     flex: 1,
@@ -93,5 +104,8 @@ const styles = StyleSheet.create({
     color: Color.textSecondaryColor,
     borderRadius: 20,
     padding: 4,
+  },
+  CardImageRounded: {
+    borderRadius: 50,
   },
 });

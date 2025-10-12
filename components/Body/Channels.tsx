@@ -1,5 +1,6 @@
 import {
   Image,
+  ImageSourcePropType,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -10,7 +11,17 @@ import React from "react";
 import CardChannel from "./CardChannel";
 import { Color } from "../../styles/Colors";
 
-const Channels = () => {
+interface channelUser {
+  id: number;
+  name: string;
+  image: ImageSourcePropType;
+}
+
+interface listChannelUsers {
+  listUser: channelUser[];
+}
+
+const Channels = ({ listUser }: listChannelUsers) => {
   return (
     <View style={styles.channelContainer}>
       <View style={styles.channelInfo}>
@@ -33,16 +44,9 @@ const Channels = () => {
           horizontal={true}
           contentContainerStyle={styles.listChannels}
         >
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
-          <CardChannel />
+          {listUser.map((user) => (
+            <CardChannel user={user} />
+          ))}
         </ScrollView>
       </View>
       <View style={styles.buttonsContainer}>

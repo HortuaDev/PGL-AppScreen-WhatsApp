@@ -44,12 +44,41 @@ const BodyComponent = () => {
     },
   ];
 
+  interface channelItem {
+    id: number;
+    name: string;
+    image: ImageSourcePropType;
+  }
+
+  const channels: channelItem[] = [
+    {
+      id: 1,
+      name: "Real Madrid",
+      image: require("../../assets/images/real_madrid.jpg"),
+    },
+    {
+      id: 2,
+      name: "BAD BUNNY",
+      image: require("../../assets/images/bad_bunny.jpg"),
+    },
+    {
+      id: 3,
+      name: "NVIDIA",
+      image: require("../../assets/images/nvidia.png"),
+    },
+    {
+      id: 4,
+      name: "NFL",
+      image: require("../../assets/images/nfl.png"),
+    },
+  ];
+
   return (
     <View style={styles.bodyContainer}>
       <ScrollView style={styles.bodyContentList}>
         <UsersList users={users} />
         <ViewedUpdate />
-        <Channels />
+        <Channels listUser={channels} />
       </ScrollView>
     </View>
   );
