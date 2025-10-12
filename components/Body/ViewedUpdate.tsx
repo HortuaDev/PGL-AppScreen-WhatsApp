@@ -23,11 +23,11 @@ export default ViewedUpdate;
 const styles = StyleSheet.create({
   viewUpdateContainer: {
     flex: 1,
-    paddingHorizontal: 15,
     backgroundColor: Color.secondaryColor,
   },
   TextContentViewUpdate: {
     flexDirection: "row",
+    paddingHorizontal: 15,
     marginBottom: 5,
   },
   textTitleView: {

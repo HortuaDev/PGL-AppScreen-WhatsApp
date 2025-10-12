@@ -23,5 +23,5 @@ const styles = StyleSheet.create({
     flex: 10,
     width: "100%",
   },
-  bodyContentList: {},
+  bodyContentList: { flex: 1 },
 });
