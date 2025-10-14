@@ -1,1 +1,0 @@
-cree un proyecto de react native con expo y le asigne una estrucutura incial colocando el readme.dm a la altura principal, y una carpeta docs con una carpeta imagenes donde se encontraran las capturas de todo lo que se haga en el desarrollo del proyecto
