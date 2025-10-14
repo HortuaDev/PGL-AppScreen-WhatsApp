@@ -4,11 +4,13 @@ import {
   View,
   ImageSourcePropType,
   Pressable,
+  Image,
 } from "react-native";
 import React from "react";
 import UsersList from "./UserList";
 import ViewedUpdate from "./ViewedUpdate";
 import Channels from "./Channels";
+import { Color } from "../../styles/Colors";
 
 const BodyComponent = () => {
   interface userItem {
@@ -83,10 +85,20 @@ const BodyComponent = () => {
       </ScrollView>
       <View style={styles.generalButtonsContainer}>
         <View style={styles.editButtonContainer}>
-          <Pressable style={styles.editButton}></Pressable>
+          <Pressable style={styles.editButton}>
+            <Image
+              style={styles.icon_edit}
+              source={require("../../assets/images/icon_edit_24.png")}
+            />
+          </Pressable>
         </View>
         <View style={styles.cameraButtonContainer}>
-          <Pressable style={styles.cameraButton}></Pressable>
+          <Pressable style={styles.cameraButton}>
+            <Image
+              style={styles.icon_camera}
+              source={require("../../assets/images/icon_camera_2_48.png")}
+            />
+          </Pressable>
         </View>
       </View>
     </View>
@@ -102,24 +114,44 @@ const styles = StyleSheet.create({
   },
   bodyContentList: { flex: 1 },
   generalButtonsContainer: {
-    marginTop: -200,
+    marginTop: -180,
     width: "100%",
     alignItems: "flex-end",
   },
   editButtonContainer: {
-    height: 100,
-    width: 100,
-    backgroundColor: "green",
+    height: 80,
+    width: 130,
     alignItems: "center",
     justifyContent: "center",
   },
   cameraButtonContainer: {
     height: 100,
     width: 130,
-    backgroundColor: "blue",
     alignItems: "center",
     justifyContent: "center",
   },
-  editButton: { height: 45, width: 45, backgroundColor: "red" },
-  cameraButton: { height: 60, width: 60, backgroundColor: "red" },
+  editButton: {
+    height: 45,
+    width: 45,
+    borderRadius: 10,
+    backgroundColor: Color.buttonThirdColor,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  icon_edit: {
+    height: 25,
+    width: 25,
+  },
+  cameraButton: {
+    height: 60,
+    width: 60,
+    borderRadius: 10,
+    backgroundColor: Color.buttonSecondaryColor,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  icon_camera: {
+    height: 35,
+    width: 35,
+  },
 });
