@@ -1,6 +1,7 @@
 creado el compoennte headerComoponent
 creado el archivo colors que contendra los colores principales de la app
 agregada la paleta de colores del proyecto con la herramienta 
+-creada la rame feature/header
 creada la estructura del headerComponent, 
 creado el componente CardItemHeader
 asignada la estructura al CardItemHeader
@@ -8,4 +9,34 @@ modificados los estilos del CardItemHeader
 modificados los estilos del HeaderComponent
 estructurado con exito el header de la app con el cardItemHeader en el HeaderComponent
 modificada la estructura del HeaderComponent para que la estructura visual se vea correctamente
-hecho el merge con develop
+-hecho el merge con develop - feature/header
+creacion de componente BodyComponent
+reestrucutracion del app.tsx donde especifico que ocupe toda la pantalla y distribuyo el espacio entre el header y el body component
+creada la estrucutra del body component
+-creada la rama user_list
+creado el componente user list
+creada la estrucutra del componente user list
+creado el componente cad user
+creada la estrucutra del componente card user
+organizados los estilos del user list
+creados los usuarios con sus propiedades
+utilizado el componente carduser para los usuarios de la lista
+-hecho el merge con feature/body - feature/user_list
+-creada la rama feature/view_update
+creado el componente viewedupdate
+creada la estructura del compmnente viewedupdate
+asignados los estilos al componente wiewedupdate
+-hecho el merge con feature/body - feature/view_update
+-creada la rama feature/channel
+creado el componente channels
+creada la estrucutura del componetne channels
+creado los estilos basicos del componente channel para su mejor organizacion
+creado el componente cardChannel 
+creada la estructura del componente carduser
+creados los estilos del componente channels
+implementado los card channels al componente channels 
+asignados los estilos al componente channels 
+-hecho el merge con feature/body - feature/view_update
+
+luego de revisar que todo estuviese bien, hecho el merge develop - feature/body
+realizadas algunas pequeñas correcciones de todo el codigo, padding, margins...

@@ -45,7 +45,7 @@ const Channels = ({ listUser }: listChannelUsers) => {
           contentContainerStyle={styles.listChannels}
         >
           {listUser.map((user) => (
-            <CardChannel user={user} />
+            <CardChannel key={user.id} user={user} />
           ))}
         </ScrollView>
       </View>

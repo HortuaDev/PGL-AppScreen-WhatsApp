@@ -3,6 +3,7 @@ import {
   StyleSheet,
   View,
   ImageSourcePropType,
+  Pressable,
 } from "react-native";
 import React from "react";
 import UsersList from "./UserList";
@@ -80,6 +81,14 @@ const BodyComponent = () => {
         <ViewedUpdate />
         <Channels listUser={channels} />
       </ScrollView>
+      <View style={styles.generalButtonsContainer}>
+        <View style={styles.editButtonContainer}>
+          <Pressable style={styles.editButton}></Pressable>
+        </View>
+        <View style={styles.cameraButtonContainer}>
+          <Pressable style={styles.cameraButton}></Pressable>
+        </View>
+      </View>
     </View>
   );
 };
@@ -92,4 +101,21 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   bodyContentList: { flex: 1 },
+  generalButtonsContainer: {
+    marginTop: -200,
+    width: "100%",
+    alignItems: "flex-end",
+  },
+  editButtonContainer: {
+    height: 100,
+    width: 100,
+    backgroundColor: "green",
+  },
+  cameraButtonContainer: {
+    height: 100,
+    width: 100,
+    backgroundColor: "blue",
+  },
+  editButton: {},
+  cameraButton: {},
 });
