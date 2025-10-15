@@ -1,6 +1,5 @@
-import { Image, ScrollView, Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import React from "react";
-import { ImageSourcePropType } from "react-native";
 import CarItemHeader from "./CarItemHeader";
 import styles from "./HeaderStyles";
 import { FontAwesome } from "@expo/vector-icons";
@@ -9,13 +8,13 @@ import { Color } from "../../styles/Colors";
 const HeaderComponent = () => {
   interface CardItem {
     id: number;
-    image?: ImageSourcePropType;
+    icon?: React.ComponentProps<typeof FontAwesome>["name"];
     text?: string;
     notifications?: number;
   }
 
   const itemsInfo: CardItem[] = [
-    { id: 1, image: require("../../assets/images/icon_group_64.png") },
+    { id: 1, icon: "group" },
     { id: 2, text: "Chats", notifications: 2 },
     { id: 3, text: "Updates" },
     { id: 4, text: "Calls" },
@@ -45,7 +44,7 @@ const HeaderComponent = () => {
           {itemsInfo.map((item) => (
             <CarItemHeader
               key={item.id}
-              image={item.image}
+              icon={item.icon}
               text={item.text}
               notifications={item.notifications}
             />

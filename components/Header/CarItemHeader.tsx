@@ -1,21 +1,24 @@
-import { Image, Text, View } from "react-native";
-import { ImageSourcePropType } from "react-native";
+import { Text, View } from "react-native";
+import { FontAwesome } from "@expo/vector-icons";
 
 import React from "react";
 import styles from "./CardItemHeaderStyles";
+import { Color } from "../../styles/Colors";
 
 interface CardItem {
-  image?: ImageSourcePropType;
+  icon?: React.ComponentProps<typeof FontAwesome>["name"];
   text?: string;
   notifications?: number;
 }
 
 const CarItemHeader = (props: CardItem) => {
-  const { image, text, notifications } = props;
+  const { icon, text, notifications } = props;
 
   return (
     <View style={styles.cardItemContainer}>
-      {image && <Image source={image} style={styles.cardIcon} />}
+      {icon && (
+        <FontAwesome name={icon} size={30} color={Color.textPrimaryColor} />
+      )}
       <View style={styles.textContainerCard}>
         {text && <Text style={styles.cardText}>{text}</Text>}
         {notifications !== undefined && (

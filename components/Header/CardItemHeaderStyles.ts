@@ -8,7 +8,6 @@ cardItemContainer: {
     marginLeft: 5,
     justifyContent: "center",
   },
-  cardIcon: { height: 35, width: 35 },
   textContainerCard: {
     flexDirection: "row",
   },
