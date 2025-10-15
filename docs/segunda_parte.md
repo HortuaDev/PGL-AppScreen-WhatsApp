@@ -58,3 +58,5 @@ Los templates y páginas representan la **estructura global** de la pantalla:
 | Template / Page | BodyComponent, App.tsx   |
 
 ![componente destrucutrado](./images/componente_destructurado.png)
+
+[<- Volver: ](../README.md)

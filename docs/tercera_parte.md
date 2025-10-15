@@ -110,3 +110,5 @@ Es de un **tamaño más pequeño** que el nombre (**20 px**) y tiene el **mismo 
 ### Estructura de los estilos
 
 ![estilos desestructurado](./images/estrucutura_de_estilos_del_card_user.png)
+
+[<- Volver: ](../README.md)

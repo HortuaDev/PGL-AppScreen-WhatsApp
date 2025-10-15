@@ -16,3 +16,5 @@
   `assets/images/`
 - Se implementan mediante el componente **`Image`** de React Native, usando la propiedad **`require()`** para importar los archivos locales.
 - Cada icono utiliza un estilo diferente según su contexto (`styles.icon`, `styles.iconChannel`, etc.).
+
+[<- Volver: ](../README.md)

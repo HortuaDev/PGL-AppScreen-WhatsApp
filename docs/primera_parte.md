@@ -25,3 +25,5 @@ Este archivo centraliza todos los valores de color utilizados en la aplicación,
 ## 🧩 Ejemplo de contenido del archivo Colors.ts
 
 ![archivo de colores.ts](./images/colores.png)
+
+[<- Volver: ](../README.md)
