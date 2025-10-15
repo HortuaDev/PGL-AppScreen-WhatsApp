@@ -1,13 +1,7 @@
-import {
-  ImageSourcePropType,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
-import React, { use } from "react";
+import { ImageSourcePropType, ScrollView, View } from "react-native";
+import React from "react";
+import styles from "./UserListStyles";
 import CardUser from "./CardUser";
-import { Color } from "../../styles/Colors";
 
 interface userItem {
   id: number;
@@ -38,11 +32,3 @@ const UsersList = ({ users }: userList) => {
 };
 
 export default UsersList;
-
-const styles = StyleSheet.create({
-  userListContainer: {
-    flex: 1,
-    backgroundColor: Color.secondaryColor,
-    padding: 15,
-  },
-});
