@@ -10,7 +10,7 @@ Su estructura está dividida en dos partes principales:
 
 ## 🧱 Estructura general del componente
 
-El componente está compuesto por un **view principal** que contiene toda la estructura de la tarjeta.
+El componente está compuesto por un **view principal** que contiene toda la estructura de la tarjeta y unas propiedades que acepta por parametro en un objeto, que luego son destructuradas en variables separadas para su posterior uso dentro del componente.
 
 Dentro de este se encuentran **dos contenedores principales**:
 
@@ -25,7 +25,7 @@ Dentro de este contenedor se organiza la parte visual del usuario:
 
 - **`imageContainer`**: es el contenedor principal de la imagen.
 - Dentro hay un **view separador**, que genera una línea oscura alrededor de la imagen.
-- Finalmente, dentro de este separador se encuentra la **imagen del usuario**.
+- Finalmente, dentro de este separador se encuentra la **imagen del usuario** y es donde se coloca la propiedad **`image`** dentro de la propiedad del componente llamada **`source()`**.
 
 ---
 
@@ -34,8 +34,8 @@ Dentro de este contenedor se organiza la parte visual del usuario:
 Dentro de este contenedor se muestra la información del usuario:
 
 - **`infoContainer`**: agrupa los textos informativos.
-  - **`textContainer`**: contiene la etiqueta del **nombre del usuario**.
-  - **`hourContainer`**: muestra la **hora** en la que el usuario colocó su estado.
+  - **`textContainer`**: contiene la etiqueta del **nombre del usuario** y es donde se coloca la propiedad **`name`**.
+  - **`hourContainer`**: muestra la **hora** en la que el usuario colocó su estado y es donde se coloca la propiedad **`hour`**.
 
 ---
 
