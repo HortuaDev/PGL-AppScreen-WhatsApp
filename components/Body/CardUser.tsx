@@ -1,12 +1,7 @@
-import {
-  Image,
-  ImageSourcePropType,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Image, ImageSourcePropType, Text, View } from "react-native";
 import React from "react";
-import { Color } from "../../styles/Colors";
+
+import styles from "./CardUserStyles";
 
 interface userItem {
   name: string;
@@ -33,43 +28,3 @@ const CardUser = (prop: userItem) => {
 };
 
 export default CardUser;
-
-const styles = StyleSheet.create({
-  cardContainer: {
-    flexDirection: "row",
-    gap: 10,
-    marginVertical: 10,
-  },
-  imageContainer: {
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: Color.storyAvailableColor,
-    borderRadius: 50,
-    padding: 2,
-  },
-  borderSeparator: {
-    borderRadius: 50,
-    backgroundColor: Color.secondaryColor,
-    padding: 2,
-  },
-  imageUser: {
-    borderRadius: 50,
-    height: 70,
-    width: 70,
-    backgroundColor: Color.secondaryColor,
-    padding: 2,
-  },
-  infoContainer: { flex: 1, padding: 5 },
-  textContainer: {
-    flex: 1,
-    color: Color.textSecondaryColor,
-    textAlignVertical: "center",
-    fontSize: 25,
-  },
-  hourContainer: {
-    flex: 1,
-    textAlignVertical: "center",
-    fontSize: 20,
-    color: Color.textPrimaryColor,
-  },
-});
