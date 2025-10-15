@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
     color: Color.textPrimaryColor,
     fontSize: 20,
   },
-  iconView: { height: 25, width: 25 },
   endViewUpdateLine: {
     flex: 1,
     height: 2,
