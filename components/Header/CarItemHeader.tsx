@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { ImageSourcePropType } from "react-native";
 
 import React from "react";
-import { Color } from "../../styles/Colors";
+import styles from "./CardItemHeaderStyles";
 
 interface CardItem {
   image?: ImageSourcePropType;
@@ -27,29 +27,3 @@ const CarItemHeader = (props: CardItem) => {
 };
 
 export default CarItemHeader;
-
-const styles = StyleSheet.create({
-  cardItemContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginLeft: 5,
-    justifyContent: "center",
-  },
-  cardIcon: { height: 35, width: 35 },
-  textContainerCard: {
-    flexDirection: "row",
-  },
-  cardText: { fontSize: 25, color: Color.textPrimaryColor },
-  cardNotification: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: Color.primaryColor,
-    marginLeft: 6,
-    textAlignVertical: "center",
-    alignItems: "center",
-    backgroundColor: Color.textPrimaryColor,
-    borderRadius: 10,
-    paddingVertical: 1,
-    paddingHorizontal: 5,
-  },
-});
