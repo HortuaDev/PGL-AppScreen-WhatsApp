@@ -3,6 +3,8 @@ import React from "react";
 import { ImageSourcePropType } from "react-native";
 import CarItemHeader from "./CarItemHeader";
 import styles from "./HeaderStyles";
+import { FontAwesome } from "@expo/vector-icons";
+import { Color } from "../../styles/Colors";
 
 const HeaderComponent = () => {
   interface CardItem {
@@ -26,14 +28,12 @@ const HeaderComponent = () => {
           <Text style={styles.title}>WhatsApp</Text>
         </View>
         <View style={styles.contentIcons}>
-          <Image
-            style={styles.icon}
-            source={require("../../assets/images/icon_camera_48.png")}
-          ></Image>
-          <Image
-            style={styles.icon}
-            source={require("../../assets/images/icon_menu_48.png")}
-          ></Image>
+          <FontAwesome name="camera" size={32} color={Color.textPrimaryColor} />
+          <FontAwesome
+            name="ellipsis-v"
+            size={32}
+            color={Color.textPrimaryColor}
+          />
         </View>
       </View>
       <View style={styles.buttonPart}>

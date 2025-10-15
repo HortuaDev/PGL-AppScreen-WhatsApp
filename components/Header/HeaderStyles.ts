@@ -18,9 +18,8 @@ const styles = StyleSheet.create({
   },
   buttonPart: { flex: 2 },
   contentIcons: {
-    flex: 1,
+    flex: 1.5,
     flexDirection: "row",
-
     alignItems: "center",
     justifyContent: "space-around",
   },
